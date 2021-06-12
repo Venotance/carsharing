@@ -1,0 +1,20 @@
+.socialgroup {
+    display: grid;
+    width: 144px;
+    grid-template-areas: "l l l";
+    margin: 38px 128px;
+    list-style: none;
+    text-align: left;
+}
+
+.socialgroup a {
+    margin-right: 24px;
+}
+
+.item svg {
+    fill: #ffffff;
+}
+
+.item svg:hover {
+    fill: #0ec261;
+}

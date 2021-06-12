@@ -1,0 +1,16 @@
+
+/* элементы меню */
+.item {
+    display: block;
+    padding: 23px 0 0 128px;
+    color: rgb(255, 255, 255);
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+}
+.item:hover {
+    /* background-color: #CFD8DC; */
+    color: #0ec261;
+}

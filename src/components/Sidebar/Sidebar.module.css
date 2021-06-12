@@ -1,0 +1,5 @@
+.sidebar {
+    display: grid;
+    grid-area: s;
+    background: #151B1F;
+}
