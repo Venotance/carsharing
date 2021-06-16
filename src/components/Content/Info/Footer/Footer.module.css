@@ -1,0 +1,25 @@
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer p {
+    align-self: end;
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.footer p:first-child {
+    font-size: 13px;
+    line-height: 15px;
+    color: #999999;
+    font-weight: 400;
+}
+
+.footer p:last-child {
+    font-size: 13px;
+    line-height: 15px;
+    color: #121212;
+    text-align: end;
+    font-weight: 400;
+}

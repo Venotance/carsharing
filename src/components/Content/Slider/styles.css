@@ -1,0 +1,107 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-sld {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Roboto;
+  color: #eeeeee;
+}
+
+.swp-sld {
+  width: 100%;
+  height: 100%;
+  padding: 35% 16% 0 16%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+}
+
+.swp-sld > div {
+  max-width: 550px;
+  max-height: 200px;
+}
+
+.swp-sld > div > a {
+  text-align: center;
+  display: block;
+  line-height: 48px;
+  width: 164px;
+  height: 48px;
+  margin-top: 32px;
+  position: relative;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #eeeeee;
+  z-index: 0;
+}
+
+.swp-sld > div > h3 {
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 500;
+}
+
+.swp-sld > div > p {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 90%;
+  margin-top: 8px;
+}
+
+
+.swp-sld a > div {
+  position: relative;
+  /* display: flex; */
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.swp-sld > div > a:hover > div{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.swp-sld > div > a:active > div{
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.a1 {
+  background: linear-gradient(90deg, #13493f 0%, #0c7b1b 100%);
+}
+
+.a2 {
+  background: linear-gradient(90deg, #132949 0%, #0C7B67 100%);
+}
+
+.a3 {
+  background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
+}
+
+.a4 {
+  background: linear-gradient(90deg, #281349 0%, #720C7B 100%);
+}

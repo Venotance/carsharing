@@ -1,67 +1,94 @@
 @font-face {
-    font-family: 'Roboto';
-    src: local('Roboto'), url(./fonts/Roboto/Roboto-Medium.ttf) format('truetype');
-  }
+  font-family: "Roboto";
+  font-weight: 500;
+  src: local("Roboto"), url(./fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  src: local("Roboto"), url(./fonts/Roboto/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: local("Roboto"), url(./fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: local("Roboto"), url(./fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
 
 /* Обнуление */
-*{
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
-  *,*:before,*:after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  /* удаление браузерной обводки при наведении */
-  :focus,:active{outline: none;}
-  a:focus,a:active{outline: none;}
-  
-  nav,footer,header,aside{display: block;}
-  
-  html,body{
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  /* ---------------------------- */
-
-  .App {
-    display: block;
-    width: 100%;
-    height: 100%;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* удаление браузерной обводки при наведении */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
 }
 
-.app__wrapper{
-    display: grid;
-    grid-template-areas: "s c";
-    grid-template-rows: 810px;
-    grid-template-columns: 64px 1fr;
+nav,
+footer,
+header,
+aside {
+  display: block;
 }
 
-
-
-.content{
-    display: grid;
-    grid-area: c;
-    grid-template-areas: "inf slid";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
-.content__info {
-    background: blue;
-    grid-area: inf;
+a, a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
 }
 
-.content__slider {
-    background: gold;
-    grid-area: slid;
+/* ---------------------------- */
+
+.App {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.app__wrapper {
+  display: grid;
+  grid-template-areas: "s c";
+  grid-template-rows: 1fr;
+  grid-template-columns: 64px 1fr;
+}
+
+#root {
+  height: 100%;
 }

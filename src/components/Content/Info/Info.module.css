@@ -1,0 +1,9 @@
+.content__info {
+    display: grid;
+    grid-template-rows: 64px auto 1fr;
+    padding: 32px 64px;
+    grid-area: inf;
+}
+
+
+
