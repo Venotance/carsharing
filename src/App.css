@@ -82,11 +82,15 @@ ul li {
   height: 100%;
 }
 
-.app__wrapper {
+.app-wrapper {
   display: grid;
   grid-template-areas: "s c";
   grid-template-rows: 1fr;
   grid-template-columns: 64px 1fr;
+}
+
+.app-wrapper__content {
+  grid-area: c;
 }
 
 #root {

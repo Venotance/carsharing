@@ -1,8 +1,0 @@
-.content{
-    display: grid;
-    grid-area: c;
-    grid-template-areas: "inf slid";
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-}
-

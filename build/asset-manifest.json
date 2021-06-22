@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/carsharing/static/css/main.1635e87c.chunk.css",
-    "main.js": "/carsharing/static/js/main.dc37d749.chunk.js",
-    "main.js.map": "/carsharing/static/js/main.dc37d749.chunk.js.map",
-    "runtime-main.js": "/carsharing/static/js/runtime-main.90c14f6a.js",
-    "runtime-main.js.map": "/carsharing/static/js/runtime-main.90c14f6a.js.map",
-    "static/js/2.edd7dffc.chunk.js": "/carsharing/static/js/2.edd7dffc.chunk.js",
-    "static/js/2.edd7dffc.chunk.js.map": "/carsharing/static/js/2.edd7dffc.chunk.js.map",
-    "static/js/3.d1563df6.chunk.js": "/carsharing/static/js/3.d1563df6.chunk.js",
-    "static/js/3.d1563df6.chunk.js.map": "/carsharing/static/js/3.d1563df6.chunk.js.map",
+    "main.css": "/carsharing/static/css/main.f1501a4f.chunk.css",
+    "main.js": "/carsharing/static/js/main.ede260ed.chunk.js",
+    "main.js.map": "/carsharing/static/js/main.ede260ed.chunk.js.map",
+    "runtime-main.js": "/carsharing/static/js/runtime-main.b0294808.js",
+    "runtime-main.js.map": "/carsharing/static/js/runtime-main.b0294808.js.map",
+    "static/css/2.50b2e305.chunk.css": "/carsharing/static/css/2.50b2e305.chunk.css",
+    "static/js/2.9f054d02.chunk.js": "/carsharing/static/js/2.9f054d02.chunk.js",
+    "static/js/2.9f054d02.chunk.js.map": "/carsharing/static/js/2.9f054d02.chunk.js.map",
+    "static/js/3.2bc04d52.chunk.js": "/carsharing/static/js/3.2bc04d52.chunk.js",
+    "static/js/3.2bc04d52.chunk.js.map": "/carsharing/static/js/3.2bc04d52.chunk.js.map",
     "index.html": "/carsharing/index.html",
-    "static/css/main.1635e87c.chunk.css.map": "/carsharing/static/css/main.1635e87c.chunk.css.map",
-    "static/js/2.edd7dffc.chunk.js.LICENSE.txt": "/carsharing/static/js/2.edd7dffc.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/carsharing/static/media/logo.6ce24c58.svg"
+    "static/css/2.50b2e305.chunk.css.map": "/carsharing/static/css/2.50b2e305.chunk.css.map",
+    "static/css/main.f1501a4f.chunk.css.map": "/carsharing/static/css/main.f1501a4f.chunk.css.map",
+    "static/js/2.9f054d02.chunk.js.LICENSE.txt": "/carsharing/static/js/2.9f054d02.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/carsharing/static/media/Roboto-Regular.a8d6ac03.ttf",
+    "static/media/slide1.57d5f14b.jpg": "/carsharing/static/media/slide1.57d5f14b.jpg",
+    "static/media/slide2.c838debe.jpg": "/carsharing/static/media/slide2.c838debe.jpg",
+    "static/media/slide3.5103b8ee.jpg": "/carsharing/static/media/slide3.5103b8ee.jpg",
+    "static/media/slide4.58d11971.jpg": "/carsharing/static/media/slide4.58d11971.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.90c14f6a.js",
-    "static/js/2.edd7dffc.chunk.js",
-    "static/css/main.1635e87c.chunk.css",
-    "static/js/main.dc37d749.chunk.js"
+    "static/js/runtime-main.b0294808.js",
+    "static/css/2.50b2e305.chunk.css",
+    "static/js/2.9f054d02.chunk.js",
+    "static/css/main.f1501a4f.chunk.css",
+    "static/js/main.ede260ed.chunk.js"
   ]
 }

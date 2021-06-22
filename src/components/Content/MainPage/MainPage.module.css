@@ -1,0 +1,8 @@
+.content{
+    display: grid;
+    height: 100%;
+    grid-template-areas: "inf slid";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+

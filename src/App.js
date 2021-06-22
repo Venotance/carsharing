@@ -1,16 +1,23 @@
 import React from 'react'
 import './App.css';
 import Sidebar from './components/Sidebar/Sidebar';
-import Content from './components/Content/Content';
+import MainPage from './components/Content/MainPage/MainPage';
+import OrderPage from './components/Content/OrderPage/OrderPage';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <div className="app__wrapper">
+      <div className="app-wrapper">
         <Sidebar />
-        <Content />
+        <div className="app-wrapper__content">
+          <Route exact path='/carsharing' component={MainPage}/>
+          <Route  path='/carsharing/order' component={OrderPage}/>
+        </div>
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 
