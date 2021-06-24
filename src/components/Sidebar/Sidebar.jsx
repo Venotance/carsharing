@@ -15,6 +15,15 @@ const Sidebar = () => {
                 <Grouptext />
                 <Groupnets />
             </div>
+            <div className="sidebar__lang">
+                <span className="sidebar__hidden">
+                    <input id="lang__switch" type="checkbox" />
+                    <label className="language" for="lang__switch">
+                        <div>Рус</div>
+                        <div>Eng</div>
+                    </label>
+                </span>
+            </div>
             <div className="sidebar__blure"></div>
         </div>
     )

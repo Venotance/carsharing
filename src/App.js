@@ -13,7 +13,7 @@ function App() {
         <Sidebar />
         <div className="app-wrapper__content">
           <Route exact path='/carsharing' component={MainPage}/>
-          <Route  path='/carsharing/order' component={OrderPage}/>
+          <Route  path='/carsharing/orderpage' component={OrderPage}/>
         </div>
       </div>
     </div>

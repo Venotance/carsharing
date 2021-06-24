@@ -1,0 +1,18 @@
+.order{
+    display: grid;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+    padding-top: 32px;
+    grid-template-rows: 32px 32px 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+}
+
+.order__navbar {
+    background-color: brown
+}
+
+.order__body {
+    background-color: burlywood;
+}
