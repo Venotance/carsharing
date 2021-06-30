@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/carsharing/static/css/main.4c29c147.chunk.css",
-    "main.js": "/carsharing/static/js/main.d09bafe8.chunk.js",
-    "main.js.map": "/carsharing/static/js/main.d09bafe8.chunk.js.map",
+    "main.css": "/carsharing/static/css/main.11be716a.chunk.css",
+    "main.js": "/carsharing/static/js/main.dd26991f.chunk.js",
+    "main.js.map": "/carsharing/static/js/main.dd26991f.chunk.js.map",
     "runtime-main.js": "/carsharing/static/js/runtime-main.47aa042f.js",
     "runtime-main.js.map": "/carsharing/static/js/runtime-main.47aa042f.js.map",
     "static/css/2.50b2e305.chunk.css": "/carsharing/static/css/2.50b2e305.chunk.css",
-    "static/js/2.626b3a31.chunk.js": "/carsharing/static/js/2.626b3a31.chunk.js",
-    "static/js/2.626b3a31.chunk.js.map": "/carsharing/static/js/2.626b3a31.chunk.js.map",
+    "static/js/2.9c73ef06.chunk.js": "/carsharing/static/js/2.9c73ef06.chunk.js",
+    "static/js/2.9c73ef06.chunk.js.map": "/carsharing/static/js/2.9c73ef06.chunk.js.map",
     "static/js/3.5d1cc3e8.chunk.js": "/carsharing/static/js/3.5d1cc3e8.chunk.js",
     "static/js/3.5d1cc3e8.chunk.js.map": "/carsharing/static/js/3.5d1cc3e8.chunk.js.map",
     "index.html": "/carsharing/index.html",
     "static/css/2.50b2e305.chunk.css.map": "/carsharing/static/css/2.50b2e305.chunk.css.map",
-    "static/css/main.4c29c147.chunk.css.map": "/carsharing/static/css/main.4c29c147.chunk.css.map",
-    "static/js/2.626b3a31.chunk.js.LICENSE.txt": "/carsharing/static/js/2.626b3a31.chunk.js.LICENSE.txt",
+    "static/css/main.11be716a.chunk.css.map": "/carsharing/static/css/main.11be716a.chunk.css.map",
+    "static/js/2.9c73ef06.chunk.js.LICENSE.txt": "/carsharing/static/js/2.9c73ef06.chunk.js.LICENSE.txt",
     "static/media/App.css": "/carsharing/static/media/Roboto-Regular.a8d6ac03.ttf",
     "static/media/slide1.57d5f14b.jpg": "/carsharing/static/media/slide1.57d5f14b.jpg",
     "static/media/slide2.c838debe.jpg": "/carsharing/static/media/slide2.c838debe.jpg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.47aa042f.js",
     "static/css/2.50b2e305.chunk.css",
-    "static/js/2.626b3a31.chunk.js",
-    "static/css/main.4c29c147.chunk.css",
-    "static/js/main.d09bafe8.chunk.js"
+    "static/js/2.9c73ef06.chunk.js",
+    "static/css/main.11be716a.chunk.css",
+    "static/js/main.dd26991f.chunk.js"
   ]
 }
