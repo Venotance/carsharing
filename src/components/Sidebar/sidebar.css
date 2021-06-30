@@ -76,6 +76,8 @@
   -moz-transition: background-color 0.75s 0.1s ease;
   -o-transition: background-color 0.75s 0.1s ease;
   -webkit-transition: background-color 0.75s 0.1s ease;
+  z-index: 2;
+  visibility: visible;
 }
 
 #sidebar__toggle:checked ~ .sidebar__lang {
@@ -105,7 +107,7 @@
   left: calc(50% + 32px);
   width: calc(50% + 32px);
   height: 100%;
-  z-index: 2;
+  visibility: hidden;
 }
 
 #lang__switch {

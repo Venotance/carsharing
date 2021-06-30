@@ -1,18 +1,89 @@
-.order{
+.content {
     display: grid;
     height: 100%;
-    max-width: 1248px;
-    margin: 0 auto;
+    width: 100%;
     padding-top: 32px;
-    grid-template-rows: 32px 32px 1fr;
+    grid-template-rows: 32px 32px 34px 1fr;
+}
+
+.content > header {
+    max-width: 1376px;
+    padding: 0 64px;
+    margin: 0 auto;
+}
+
+/* --------------------- */
+
+.navbar {
+    display: grid;
+    grid-row: 3/4;
+    max-width: 100%;
+    height: 100%;
+    padding: 0 64px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    grid-template-columns: 1fr minmax(736px, 1248px) 1fr;
+    grid-template-rows: 1fr;
+}
+
+.navbar_elements {
+    display: grid;
+    height: 100%;
+    grid-column: 2/3;
+    grid-template-columns: 430px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.navbar_elements > div {
+    align-items: center;
+}
+
+.navbar_elements > div > a:active {
+    color: #b0ca39
+}
+
+.navbar_elements > div > a {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 32px;
+    color: #999999;
+}
+
+.arrow {
+    margin: 5px 13px 0 16px;
+    display: inline-block;
+    border: 4px solid transparent;
+    border-left: 5px solid #999999;
+    width: 0;
+    height: 0;
+}
+
+/* --------------------------- */
+.body {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 32px;
+    padding: 0 64px;
+    grid-template-columns: 1fr minmax(736px, 1248px) 1fr;
+    grid-template-rows: 1fr;
 }
 
-.order__navbar {
-    background-color: brown
+.mestopoloz {
+    display: grid;
+    height: 100%;
+    grid-column: 2/3;
+    grid-template-columns: minmax(769px, 928px) 320px;
+    grid-template-rows: 1fr;
 }
 
-.order__body {
-    background-color: burlywood;
+.mestopoloz > div:nth-child(1) {
+    display: grid;
+    padding: 32px 32px 0 0;
+    background-color: rgb(203, 255, 118);
+    border-right: 1px solid #eeeeee;
+}
+
+.mestopoloz > div:nth-child(2) {
+    display: grid;
+    /* background-color: rgb(245, 245, 245); */
 }
