@@ -6,7 +6,7 @@ import Groupnets from './Groupnets/Groupnets'
 
 const Sidebar = () => {
     return (
-        <div className="sidebar">
+        <div className={ob.sidebar}>
             <input id="sidebar__toggle" type="checkbox" />
             <label className="sidebar__btn" for="sidebar__toggle">
                 <span></span>

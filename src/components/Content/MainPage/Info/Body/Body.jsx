@@ -9,7 +9,7 @@ const Body = () => {
       <h2>Need for drive</h2>
       <p>Поминутная аренда авто твоего города</p>
       {/* <a href="#" className="btn">Забронировать</a> */}
-      <NavLink to='/carsharing/orderpage'>Забронировать</NavLink>
+      <NavLink to='/carsharing/orderpage/location'>Забронировать</NavLink>
     </section>
   )
 }

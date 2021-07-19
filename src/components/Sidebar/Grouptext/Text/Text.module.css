@@ -1,15 +1,27 @@
-
 /* элементы меню */
 .item {
     display: block;
-    padding: 23px 0 0 128px;
+    padding: 23px 0 0 0;
     color: rgb(255, 255, 255);
     font-family: "Roboto", sans-serif;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: 500;
     text-decoration: none;
+    width: 0%;
 }
+@media (max-width: 1023px) {
+    .item {
+        font-size: 28px;
+    }
+}
+@media (max-width: 767px) {
+    .item {
+        font-size: 22px;
+    }
+}
+
+
 .item:hover {
     /* background-color: #CFD8DC; */
     color: #0ec261;

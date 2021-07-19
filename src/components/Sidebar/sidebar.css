@@ -1,9 +1,3 @@
-.sidebar {
-  display: grid;
-  grid-area: s;
-  background: #151b1f;
-}
-
 /* скрываем чекбокс */
 #sidebar__toggle {
   opacity: 0;
@@ -20,8 +14,27 @@
   width: 24px;
   height: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 4;
 }
+@media (max-width: 1023px) {
+  .sidebar__btn {
+    top: 29px;
+    left: 27px;
+    right: 21px;
+    width: 31px;
+    height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar__btn {
+    top: 17px;
+    left: 8%;
+    right: 21px;
+    width: 21px;
+    height: 35px;
+  }
+}
+
 
 /* добавляем "гамбургер" */
 .sidebar__btn > span,
@@ -34,6 +47,15 @@
   border-radius: 15px;
   background-color: #ffffff;
 }
+@media (max-width: 767px) {
+  .sidebar__btn > span,
+  .sidebar__btn > span::before,
+  .sidebar__btn > span::after {
+    
+    background-color: #121212;
+  }
+}
+
 .sidebar__btn > span::before {
   content: "";
   top: -8px;
@@ -53,7 +75,24 @@
   width: calc(50% + 32px);
   height: 100%;
   margin: 0;
+  z-index: 3;
   background-color: #111518;
+}
+@media (max-width: 1439px) {
+  .sidebar__box {
+    width: calc(56.93% + 32px);
+  }
+}
+@media (max-width: 1023px) {
+  .sidebar__box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #sidebar__toggle {
+    display: none;
+  }
 }
 
 #sidebar__toggle:checked ~ .sidebar__btn > span {
@@ -71,6 +110,13 @@
   visibility: visible;
   left: 0;
 }
+@media (max-width: 767px) {
+  #sidebar__toggle:checked ~ .sidebar__btn > span,
+  #sidebar__toggle:checked ~ .sidebar__btn > span::before,
+  #sidebar__toggle:checked ~ .sidebar__btn > span::after {
+    background-color: #ffffff;
+  }
+}
 #sidebar__toggle:checked ~ .sidebar__blure {
   background-color: rgba(21, 27, 31, 0.81);
   -moz-transition: background-color 0.75s 0.1s ease;
@@ -84,6 +130,15 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.1s, visibility 0s 0.1s;
+}
+@media (max-width: 767px) {
+  #sidebar__toggle:checked ~ .sidebar__lang {
+    z-index: 3;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    transition: opacity 0.1s, visibility 0s;
+  }
 }
 
 .sidebar__btn > span,
@@ -109,6 +164,17 @@
   height: 100%;
   visibility: hidden;
 }
+@media (max-width: 1439px) {
+  .sidebar__blure {
+    left: calc(56.9% + 32px);
+    width: calc(43.2% + 32px);
+  }
+}
+@media (max-width: 1023px) {
+  .sidebar__blure {
+    display: none;
+  }
+}
 
 #lang__switch {
   opacity: 0;
@@ -124,6 +190,14 @@
   opacity: 1;
   transition: opacity 0.1s, visibility 0s;
 }
+@media (max-width: 767px) {
+  .sidebar__lang {
+    display: none;
+    padding-bottom: 10px;
+    transition: opacity 0.1s, visibility 0s 0.1s;
+  }
+}
+
 
 .language {
   display: grid;
@@ -132,25 +206,31 @@
   border-radius: 70px;
   text-align: center;
   line-height: 48px;
-  border: 1px solid #151B1F;
+  border: 1px solid #151b1f;
   width: 48px;
   height: 48px;
 }
+@media (max-width: 767px) {
+  .language {
+    border: none;
+  }
+}
+
 
 .language:hover {
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
 }
 
-.language:hover div{
-  color: #EEEEEE;
+.language:hover div {
+  color: #eeeeee;
 }
 
-.language:active{
-  border: 1px solid #EEEEEE;
-  color: #EEEEEE;
+.language:active {
+  border: 1px solid #eeeeee;
+  color: #eeeeee;
 }
 
-.language:active div{
+.language:active div {
   color: #0ec261;
 }
 

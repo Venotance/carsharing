@@ -1,10 +1,12 @@
 import React from 'react'
 import ob from './Header.module.css'
 import { NavLink } from 'react-router-dom';
+import Sidebar from '../../Sidebar/Sidebar';
 
 const Header = () => {
   return (
       <header className={ob.header}>
+        {/* <Sidebar className={ob.sidebar}/> */}
         <NavLink to='/carsharing'><h3 className={ob.h3}>Need for drive</h3></NavLink>
         <div className={ob.space}></div>
         <a href="#">

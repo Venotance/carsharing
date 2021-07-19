@@ -64,7 +64,8 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 a:hover {
@@ -82,12 +83,25 @@ ul li {
   height: 100%;
 }
 
+
 .app-wrapper {
   display: grid;
   grid-template-areas: "s c";
   grid-template-rows: 1fr;
   grid-template-columns: 64px 1fr;
 }
+@media (max-width: 1023px) {
+  .app-wrapper {
+    grid-template-columns: 85px 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .app-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "c";
+  }
+}
+
 
 .app-wrapper__content {
   grid-area: c;

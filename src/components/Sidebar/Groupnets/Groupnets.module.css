@@ -1,11 +1,23 @@
 .socialgroup {
     display: grid;
     width: 144px;
-    grid-template-areas: "l l l";
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 38px 128px;
     list-style: none;
     text-align: left;
 }
+@media (max-width: 1439px) {
+    .socialgroup {
+        margin: 38px 97px;
+    }
+}
+@media (max-width: 767px) {
+    .socialgroup{
+        margin: 38px 9%;
+    }
+}
+
+
 
 .socialgroup a {
     margin-right: 24px;

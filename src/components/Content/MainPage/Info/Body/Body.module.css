@@ -1,6 +1,11 @@
 .content__body {
     margin-top: 163px;
 }
+@media (max-width: 767px) {
+    .content__body {
+        margin-top: 33px;
+    }
+}
 
 .content__body h1,
 h2 {
@@ -9,6 +14,13 @@ h2 {
     font-weight: 700;
     font-size: 70px;
     line-height: 66px;
+}
+@media (max-width: 767px) {
+    .content__body h1,
+    h2 {
+        font-size: 32px;
+        line-height: 100%;
+    }
 }
 
 .content__body h1 {
@@ -28,6 +40,14 @@ h2 {
     margin: 25px 0 55px 0;
     color: #999999;
 }
+@media (max-width: 767px) {
+    .content__body p {
+        font-size: 18px;
+        line-height: 21px;
+        margin: 16px 0 32px 0;
+    }
+}
+
 
 .content__body a {
     display: block;
@@ -43,4 +63,12 @@ h2 {
     font-size: 18px;
     line-height: 48px;
     text-align: center;
+}
+@media (max-width: 767px) {
+    .content__body a {
+        position: absolute;
+        width: 100%;
+        border-radius: 0px;
+        margin-left: -16px;
+    }
 }

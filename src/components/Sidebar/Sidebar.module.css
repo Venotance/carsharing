@@ -1,5 +1,11 @@
 .sidebar {
     display: grid;
     grid-area: s;
-    background: #151B1F;
+    background: #151b1f;
+}
+@media (max-width: 767px) {
+    .sidebar {
+        position: absolute;
+        height: 100%;
+    }
 }

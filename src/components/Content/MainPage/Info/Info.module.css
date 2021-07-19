@@ -4,6 +4,13 @@
     padding: 32px 64px;
     grid-area: inf;
 }
-
-
-
+@media (max-width: 1439px) {
+    .content__info {
+        padding: 32px 32px;
+    }
+}
+@media (max-width: 767px) {
+    .content__info {
+        padding: 16px;
+    }
+}

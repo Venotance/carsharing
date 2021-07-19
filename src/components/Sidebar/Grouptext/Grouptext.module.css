@@ -1,9 +1,39 @@
 .ul {
     display: block;
-    /* height: 30%; */
     margin: 0;
-    padding: 307px 0 0 0;
+    padding: 307px 0 0 128px;
     list-style: none;
     text-align: left;
 }
+@media (max-width: 1439px) {
+    .ul {
+        padding: 307px 0 0 97px;
+    }
+}
+@media (max-width: 1023px) {
+    .ul {
+        padding: 317px 0 0 97px;
+    }
+}
+@media (max-width: 767px) {
+    .ul {
+        padding: 30% 0 0 9%;
+    }
+}
+
+
+.ul li:nth-child(1) > a {
+    padding: 0;
+}
+@media (max-width: 1439px) {
+    .ul li:nth-child(1) > a {
+        padding: 0;
+    }
+}
+@media (max-width: 767px) {
+    .ul li:nth-child(1) > a {
+        padding: 0;
+    }
+}
+
 
