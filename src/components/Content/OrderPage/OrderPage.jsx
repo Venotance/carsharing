@@ -8,13 +8,23 @@ import Autocomplete from "./Autocomplete";
 
 
 const OrderPage = () => {
- var state = {
+  var state = {
     name: 'Бумеранг не запущен'
   };
   const updateData = (value) => {
     state = { name: value }
-    console.log( value )
+    console.log("Value: " + value)
   }
+  // const updateData = (value) => {
+  //   state = { name: value }
+  //   console.log( value )
+  // }
+
+  let city = [" Ульяновск",
+              " Саранск",
+              " Пермь",
+              " Астрахань"]
+
   return (
     <div className={ob.content}>
       <Header />
@@ -44,12 +54,7 @@ const OrderPage = () => {
                 <Autocomplete
                   updateData={updateData}
                   placehold='Начните вводить город ...'
-                  options={[
-                    "Ульяновск",
-                    "Саранск",
-                    "Пермь",
-                    "Астрахань"
-                  ]}
+                  options={city}
                 />
               </div>
               <div className={ob.point_line}>
