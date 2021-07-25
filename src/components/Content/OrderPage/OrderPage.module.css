@@ -82,7 +82,7 @@
     padding: 32px 32px 0 0;
     /* background-color: rgb(203, 255, 118); */
     border-right: 1px solid #eeeeee;
-    grid-template-rows: 56px 43px 1fr;
+    grid-template-rows: 60px 43px 1fr;
     grid-template-columns: 1fr;
 }
 
@@ -98,11 +98,6 @@
     max-height: 352px;
 }
 
-.description {
-    display: grid;
-    /* background-color: rgb(245, 245, 245); */
-}
-
 .select_adress {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -112,7 +107,7 @@
 .select_adress > div {
     display: grid;
     grid-template-columns: 93px 235px 1fr;
-    grid-gap: 5px;
+    grid-gap: 15px;
 }
 
 .select_adress > div > div {
@@ -125,4 +120,8 @@
     font-family: Roboto;
     font-weight: 300;
     font-size: 14px;
+}
+
+.city_line > div:nth-child(2) > div > div {
+    height: 25px;
 }
