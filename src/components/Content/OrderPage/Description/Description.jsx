@@ -1,16 +1,15 @@
 import React from 'react'
 import Points from './Points/Points'
+import PriceButton from './PriceButton/PriceButton'
 import ob from './Description.module.css'
+import { locparser } from '../ParserLocation'
+import { BrowserRouter, Route } from 'react-router-dom';
 
 const Description = (props) => {
-
-  let location = props.location;
-  { console.log(location.value1, location.value2) }
-  location.value1 = (location.value1 == null) ? '' : location.value1;
-  location.value2 = (location.value2 == null) ? '' : location.value2;
-  let sepatator = (location.value1 == '') ? '' : ', ';
-
-
+  let location1 = locparser(1, props);
+  let location2 = locparser(2, props);
+  let sepatator = (location2 == '') ? '' : ', ';
+  let price = [8000,12000]
 
   return (
     <div className={ob.description}>
@@ -20,17 +19,16 @@ const Description = (props) => {
           <p>Пункт выдачи</p>
           <Points />
           <div>
-            <p>{location.value1}{sepatator}</p>
-            <p>{location.value2}</p>
+            <p>{location1}{sepatator}</p>
+            <p>{location2}</p>
           </div>
-          {console.log(location.value1)}
         </div>
-
-
-        
-        {/* <p>{`value: ${props.locatv !== null ? `'${props.locatv}'` : 'null'}`}</p>
-      <p>{console.log(props.locatv, props.locatinp)}</p>
-      <div>{`inputValue: '${props.locatinp}'`}</div> */}
+        <Route exact path='/carsharing/orderpage/location'>
+          <PriceButton meanprice={price} textbutton='Выбрать модель' />
+        </Route>
+        <Route exact path='/carsharing/orderpage/model'>
+          <PriceButton meanprice={price} textbutton='Дополнительно' />
+        </Route>
       </div>
     </div>
   )

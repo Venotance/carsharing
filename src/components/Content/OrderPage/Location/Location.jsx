@@ -2,14 +2,19 @@ import React from 'react'
 import ob from './Location.module.css'
 import { useState } from 'react';
 import Map from './img/map.jpg';
+import { locparser } from '../ParserLocation';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-const Location = () => {
-    const [value1, setValue1] = useState(null);
-    const [value2, setValue2] = useState(null);
-    const [inputValue1, setInputValue1] = useState('');
+const Location = (props) => {
+    let location1 = locparser(1, props);
+    let location2 = locparser(2, props);
+    const [value1, setValue1] = useState(location1);
+    const [value2, setValue2] = useState(location2);
+    let inputValue1 = '';
     const [inputValue2, setInputValue2] = useState('');
+    const { updateLocation1 } = props;
+    // const [inputValue1, setInputValue1] = useState('');
 
     let adress = [
         {
@@ -38,8 +43,6 @@ const Location = () => {
         },
     ]
 
-    let location = { value1, value2 }
-
 
     let arrCities = adress.map((el) => el.city)
     let arrPoints = () => {
@@ -50,7 +53,6 @@ const Location = () => {
         })
         return points;
     }
-    // let arrPoints = adress.map((el) => el.city)
 
     let inputEQ = (eq) => {
         if (eq == "Город") {
@@ -68,12 +70,25 @@ const Location = () => {
                     <div><p>Город</p></div>
                     <Autocomplete
                         onInputChange={(event, newInputValue1) => {
-                            setInputValue2('');
-                            setValue2(null);
+                            (newInputValue1 == value1) ? '' : (
+                                setInputValue2(''),
+                                setValue2(null))
                         }}
                         onChange={(event, newValue1) => {
                             setValue1(newValue1);
                         }}
+                        value={`${(value1 == null) ? '' : value1}`}
+                        click={
+                            updateLocation1((value1 == null) ? '' :
+                                (value1 == '') ? '' : (
+                                    (`${value1}${(value2 == null) ? '' :
+                                        ((value2 == '') ? '' :
+                                            (`, ${value2}`)
+                                        )
+                                        }`)
+                                )
+                            )
+                        }
                         id="combo-box-demo"
                         options={inputEQ("Город")}
                         getOptionLabel={(option) => option}
@@ -93,6 +108,7 @@ const Location = () => {
                         onInputChange={(event, newInputValue2) => {
                             (value1 == null) ? setInputValue2('') : setInputValue2(newInputValue2);
                         }}
+                        value={`${value2}`}
                         id="combo-box-demo"
                         options={inputEQ("Пункт")}
                         getOptionLabel={(option) => option}

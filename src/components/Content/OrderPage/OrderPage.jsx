@@ -7,10 +7,10 @@ import NavbarOrder from './NavbarOrder/NavbarOrder'
 import Description from './Description/Description';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-
 const OrderPage = () => {
+  let buttonText='';
+  const [location1, setStateLocation1] = React.useState('')
 
-  
   return (
     <div className={ob.content}>
       <Header />
@@ -18,10 +18,15 @@ const OrderPage = () => {
       <NavbarOrder />
       <div className={ob.body}>
         <div className={ob.body_content}>
-          <Route exact path='/carsharing/orderpage/location' component={Location}/>
-          {/* <Route exact path='/carsharing/orderpage/model' component={Model}/> */}
-          <Description 
-          location={location}
+          <Route exact path='/carsharing/orderpage/location'>
+            <Location 
+            updateLocation1={setStateLocation1} 
+            location={location1}
+            />
+          </Route>
+          {/* <Route exact path='/carsharing/orderpage/model' component={Model} /> */}
+          <Description
+            location={location1}
           />
         </div>
       </div>
