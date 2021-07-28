@@ -1,7 +1,7 @@
 import React from 'react'
 import ob from './OrderPage.module.css'
 import Header from '../Header/Header'
-// import Model from './Model/Model'
+import Model from './Model/Model'
 import Location from './Location/Location'
 import NavbarOrder from './NavbarOrder/NavbarOrder'
 import Description from './Description/Description';
@@ -24,7 +24,7 @@ const OrderPage = () => {
             location={location1}
             />
           </Route>
-          {/* <Route exact path='/carsharing/orderpage/model' component={Model} /> */}
+          <Route exact path='/carsharing/orderpage/model' component={Model} />
           <Description
             location={location1}
           />
