@@ -6,10 +6,18 @@ import { locparser } from '../ParserLocation'
 import { BrowserRouter, Route } from 'react-router-dom';
 
 const Description = (props) => {
+  let v = 0;
   let location1 = locparser(1, props);
   let location2 = locparser(2, props);
   let sepatator = (location2 == '') ? '' : ', ';
-  let price = [8000,12000]
+
+  function checkParams(value1,value2) {
+    if ((value1 == "")||(value1 == null)){
+      return [0, value2];
+    } else {
+      return [1, value2];
+    }
+  }
 
   return (
     <div className={ob.description}>
@@ -24,10 +32,11 @@ const Description = (props) => {
           </div>
         </div>
         <Route exact path='/carsharing/orderpage/location'>
-          <PriceButton meanprice={price} textbutton='Выбрать модель' />
+          {console.log(checkParams(location2), ' ', location2)}
+          <PriceButton property={checkParams(location2,'geo')} textbutton='Выбрать модель' />
         </Route>
         <Route exact path='/carsharing/orderpage/model'>
-          <PriceButton meanprice={price} textbutton='Дополнительно' />
+          <PriceButton property={checkParams(1,'mdl')} textbutton='Дополнительно' />
         </Route>
       </div>
     </div>
