@@ -27,27 +27,6 @@ const NavbarOrder = (props) => {
         return checkValue(value.ttl, value.adt)
     }
   }
-  // function checkValue (value, name) {
-  //   if (value == 1) {
-  //     flag=name;
-  //     return ob.nav_element_visited
-  //   } else {
-  //     return ob.nav_element
-  //   }
-  // }
-
-  let states_array = [
-    { element_name: "geo", element_value: props.geo },
-    { element_name: "mdl", element_value: props.mdl },
-    { element_name: "adt", element_value: props.adt },
-    { element_name: "ttl", element_value: props.ttl }
-  ]
-
-  let flag = '';
-  let geo = props.geo;
-  let mdl = props.mdl;
-  let adt = props.adt;
-  let ttl = props.ttl;
 
   console.log(geo, ' ', mdl, ' ', adt, ' ', ttl, ' ', flag)
 
