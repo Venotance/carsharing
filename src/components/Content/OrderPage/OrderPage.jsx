@@ -6,27 +6,37 @@ import Location from './Location/Location'
 import NavbarOrder from './NavbarOrder/NavbarOrder'
 import Description from './Description/Description';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { locparser1 } from './ParserLocation'
+import { checkParams } from './CheckParams'
 
 const OrderPage = () => {
-  let buttonText='';
   const [location1, setStateLocation1] = React.useState('')
+  let locationOne = locparser1(1, location1);
+  let locationTwo = locparser1(2, location1);
 
   return (
     <div className={ob.content}>
       <Header />
       <div></div>
-      <NavbarOrder />
+      <NavbarOrder 
+        geo={checkParams(locationTwo)}
+        mdl={checkParams('')}
+        adt={checkParams('')}
+        ttl={checkParams('')}
+      />
       <div className={ob.body}>
         <div className={ob.body_content}>
           <Route exact path='/carsharing/orderpage/location'>
             <Location 
             updateLocation1={setStateLocation1} 
-            location={location1}
+            location1={locationOne}
+            location2={locationTwo}
             />
           </Route>
           <Route exact path='/carsharing/orderpage/model' component={Model} />
           <Description
-            location={location1}
+            location1={locationOne}
+            location2={locationTwo}
           />
         </div>
       </div>

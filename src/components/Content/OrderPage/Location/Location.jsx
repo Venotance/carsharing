@@ -2,13 +2,12 @@ import React from 'react'
 import ob from './Location.module.css'
 import { useState } from 'react';
 import Map from './img/map.jpg';
-import { locparser } from '../ParserLocation';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const Location = (props) => {
-    let location1 = locparser(1, props);
-    let location2 = locparser(2, props);
+    let location1 = props.location1;
+    let location2 = props.location2;
     const [value1, setValue1] = useState(location1);
     const [value2, setValue2] = useState(location2);
     let inputValue1 = '';
