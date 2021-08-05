@@ -1,0 +1,47 @@
+.geolocation {
+    display: grid;
+    padding: 32px 32px 0 0;
+    border-right: 1px solid #eeeeee;
+    grid-template-rows: 60px 43px 1fr;
+    grid-template-columns: 1fr;
+}
+
+.map {
+    display: grid;
+    grid-row: 3/3;
+    grid-template-rows: 16px 1fr;
+    grid-gap: 16px;
+}
+
+.map img {
+    max-width: 736px;
+    max-height: 352px;
+}
+
+.select_adress {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.select_adress > div {
+    display: grid;
+    grid-template-columns: 93px 235px 1fr;
+    grid-gap: 15px;
+}
+
+.select_adress > div > div {
+    display: grid;
+    align-items: center;
+}
+
+.select_adress div > p {
+    text-align: right;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.city_line > div:nth-child(2) > div > div {
+    height: 25px;
+}

@@ -1,0 +1,10 @@
+.step_two {
+    display: grid;
+    padding: 32px 32px 0 0;
+    /* background-color: rgb(203, 255, 118); */
+    border-right: 1px solid #eeeeee;
+    grid-template-rows: 56px 43px 1fr;
+    grid-template-columns: 1fr;
+    font-family: Roboto;
+    font-weight: 300;
+}
