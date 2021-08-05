@@ -28,7 +28,7 @@ const NavbarOrder = (props) => {
     }
   }
 
-  console.log(geo, ' ', mdl, ' ', adt, ' ', ttl, ' ', flag)
+  // console.log(geo, ' ', mdl, ' ', adt, ' ', ttl, ' ', flag)
 
   return (
     <div className={ob.navbar}>
