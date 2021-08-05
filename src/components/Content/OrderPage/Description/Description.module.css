@@ -1,0 +1,45 @@
+.description {
+    display: grid;
+    margin: 32px 0 0 32px;
+}
+
+.order_details > p,
+.order_details > div {
+    display: grid;
+    align-content: end;
+}
+
+.order_details > p:nth-child(1) {
+    min-width: 90.92px;
+}
+
+.description > div > p {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #121212;
+}
+
+.order_details {
+    margin-top: 26px;
+    max-height: 48px;
+    text-align: right;
+    vertical-align: bottom;
+    display: grid;
+    grid-auto-flow: column;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #121212;
+}
+
+.order_details :not(p:nth-child(1)) {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+}
