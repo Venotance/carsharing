@@ -35,7 +35,6 @@
   }
 }
 
-
 /* добавляем "гамбургер" */
 .sidebar__btn > span,
 .sidebar__btn > span::before,
@@ -51,11 +50,9 @@
   .sidebar__btn > span,
   .sidebar__btn > span::before,
   .sidebar__btn > span::after {
-    
     background-color: #121212;
   }
 }
-
 
 .sidebar__btn > span::before {
   content: "";
@@ -67,7 +64,8 @@
 }
 
 /* контейнер меню */
-.sidebar__box {
+.sidebar__box,
+.sidebar__box_order {
   display: block;
   position: fixed;
   visibility: hidden;
@@ -79,13 +77,22 @@
   z-index: 3;
   background-color: #111518;
 }
+/* ............................................................... */
+.sidebar__box_order {
+  width: calc(34% + 32px);
+}
 @media (max-width: 1439px) {
-  .sidebar__box {
+  .sidebar__box,
+  .sidebar__box_order {
     width: calc(56.93% + 32px);
+  }
+  .sidebar__box_order {
+    width: calc(37% + 32px);
   }
 }
 @media (max-width: 1023px) {
-  .sidebar__box {
+  .sidebar__box,
+  .sidebar__box_order {
     width: 100%;
   }
 }
@@ -107,10 +114,12 @@
   top: 0;
   transform: rotate(90deg);
 }
-#sidebar__toggle:checked ~ .sidebar__box {
+#sidebar__toggle:checked ~ .sidebar__box,
+#sidebar__toggle:checked ~ .sidebar__box_order {
   visibility: visible;
   left: 0;
 }
+
 @media (max-width: 767px) {
   #sidebar__toggle:checked ~ .sidebar__btn > span,
   #sidebar__toggle:checked ~ .sidebar__btn > span::before,
@@ -118,7 +127,8 @@
     background-color: #ffffff;
   }
 }
-#sidebar__toggle:checked ~ .sidebar__blure {
+#sidebar__toggle:checked ~ .sidebar__blure,
+#sidebar__toggle:checked ~ .sidebar__blure_order {
   background-color: rgba(21, 27, 31, 0.81);
   -moz-transition: background-color 0.75s 0.1s ease;
   -o-transition: background-color 0.75s 0.1s ease;
@@ -148,16 +158,20 @@
   transition-duration: 0.25s;
 }
 
-.sidebar__box {
+.sidebar__box,
+.sidebar__box_order {
   transition-duration: 0.55s;
 }
 
-.sidebar__blure {
+.sidebar__blure,
+.sidebar__blure_order {
   transition-duration: 0.25s;
 }
 
-.sidebar__blure {
+.sidebar__blure,
+.sidebar__blure_order {
   display: block;
+  cursor: default;
   position: fixed;
   top: 0;
   left: calc(50% + 32px);
@@ -165,14 +179,25 @@
   height: 100%;
   visibility: hidden;
 }
+/* ............................................................... */
+.sidebar__blure_order {
+  left: calc(34% + 32px);
+  width: calc(66% + 32px);
+}
 @media (max-width: 1439px) {
-  .sidebar__blure {
+  .sidebar__blure,
+  .sidebar__blure_order {
     left: calc(56.9% + 32px);
     width: calc(43.2% + 32px);
   }
+  .sidebar__blure_order {
+    left: calc(37% + 32px);
+    width: calc(63% + 32px);
+  }
 }
 @media (max-width: 1023px) {
-  .sidebar__blure {
+  .sidebar__blure,
+  .sidebar__blure_order {
     display: none;
   }
 }
@@ -199,7 +224,6 @@
   }
 }
 
-
 .language {
   display: grid;
   grid-template-columns: 1fr;
@@ -216,7 +240,6 @@
     border: none;
   }
 }
-
 
 .language:hover {
   border: 1px solid #eeeeee;

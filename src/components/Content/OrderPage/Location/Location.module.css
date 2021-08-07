@@ -4,6 +4,15 @@
     border-right: 1px solid #eeeeee;
     grid-template-rows: 60px 43px 1fr;
     grid-template-columns: 1fr;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.geolocation input {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .map {
@@ -11,6 +20,7 @@
     grid-row: 3/3;
     grid-template-rows: 16px 1fr;
     grid-gap: 16px;
+
 }
 
 .map img {
@@ -37,10 +47,7 @@
 
 .select_adress div > p {
     text-align: right;
-    font-family: Roboto;
-    font-weight: 300;
-    font-size: 14px;
-}
+} 
 
 .city_line > div:nth-child(2) > div > div {
     height: 25px;
