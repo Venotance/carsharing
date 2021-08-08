@@ -1,7 +1,9 @@
-.header > div:nth-child(1){
+.header,
+.header_order > div:nth-child(1){
     display: none;
 }
-.header {
+.header,
+.header_order {
     display: grid;
     height: 32px;
     width: 100%;
@@ -11,7 +13,8 @@
     align-items: center;
 }
 @media (max-width: 767px) {
-    .header {
+    .header,
+    .header_order {
         grid-template-areas:
             "h3"
             "geolocation";
@@ -25,7 +28,8 @@
 }
 
 
-.header h3 {
+.header,
+.header_order h3 {
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;

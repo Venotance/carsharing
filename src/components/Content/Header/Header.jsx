@@ -4,9 +4,17 @@ import { NavLink } from 'react-router-dom';
 import Sidebar from '../../Sidebar/Sidebar';
 
 
-const Header = () => {
+const Header = (props) => {
+  let statusflag=props.statusflag;
+  // function classReturn (flag, className) {
+  //   if (flag == 'OrderPage') {
+  //     return className+'_order'
+  //   }
+  //   else return className
+  // }
   return (
-      <header className={ob.header}>
+      // <header className={ob.header}>
+      <header className={(statusflag == 'OrderPage') ? ob.header_order : ob.header}>
         {/* <Sidebar className={ob.sidebar}/> */}
         <NavLink to='/carsharing'><h3 className={ob.h3}>Need for drive</h3></NavLink>
         <div className={ob.space}></div>

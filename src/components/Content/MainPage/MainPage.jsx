@@ -4,7 +4,7 @@ import Slider from './Slider/Slider'
 import ob from './MainPage.module.css'
 
 const MainPage = (props) => {
-  props.statusflag('MainPage');
+  props.setstatusflag('MainPage');
   return (
     <div className={ob.content}>
       <Info />

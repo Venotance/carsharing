@@ -13,11 +13,12 @@ const OrderPage = (props) => {
   const [location1, setStateLocation1] = React.useState('')
   let locationOne = locparser1(1, location1);
   let locationTwo = locparser1(2, location1);
-  props.statusflag('OrderPage');
+  props.setstatusflag('OrderPage');
+  let statusflag = props.statusflag;
 
   return (
     <div className={ob.content}>
-      <Header />
+      <Header statusflag={statusflag}/>
       <div></div>
       <NavbarOrder
         geo={checkParams(locationTwo)}

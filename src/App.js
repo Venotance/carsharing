@@ -10,19 +10,22 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="App">
-      <div className="app-wrapper">
-        <Sidebar statusflag={statusflag}/>
-        <div className="app-wrapper__content">
-          <Route exact path='/carsharing' >
-            <MainPage statusflag={setStateStatusflag} />
-          </Route>
-          <Route  path='/carsharing/orderpage'>
-            <OrderPage statusflag={setStateStatusflag} />
-          </Route>
+      <div className="App">
+        <div className="app-wrapper">
+          <Sidebar statusflag={statusflag} />
+          <div className="app-wrapper__content">
+            <Route exact path='/carsharing' >
+              <MainPage setstatusflag={setStateStatusflag} />
+            </Route>
+            <Route path='/carsharing/orderpage'>
+              <OrderPage
+                setstatusflag={setStateStatusflag}
+                statusflag={statusflag}
+              />
+            </Route>
+          </div>
         </div>
       </div>
-    </div>
     </BrowserRouter>
   );
 }

@@ -9,6 +9,11 @@
     grid-template-columns: 1fr minmax(736px, 1248px) 1fr;
     grid-template-rows: 1fr;
 }
+@media (max-width: 1439px) {
+    .navbar {
+        padding: 0 32px;
+    }
+}
 
 .navbar_elements {
     display: grid;

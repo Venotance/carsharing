@@ -27,6 +27,12 @@
     max-width: 736px;
     max-height: 352px;
 }
+@media (max-width: 1439px) {
+    .map img {
+    max-width: 586px;
+    max-height: 352px;
+    }
+}
 
 .select_adress {
     display: grid;

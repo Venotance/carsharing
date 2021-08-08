@@ -2,6 +2,11 @@
     display: grid;
     margin: 32px 0 0 32px;
 }
+@media (max-width: 1439px) {
+    .description {
+        margin: 32px 0 0 16px;
+    }
+}
 
 .order_details > p,
 .order_details > div {
