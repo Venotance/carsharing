@@ -68,10 +68,18 @@ const Location = (props) => {
                 <div className={ob.city_line}>
                     <div><p>Город</p></div>
                     <Autocomplete
+                        // onInputChange={(event, newInputValue1) => {
+                        //     (newInputValue1 == value1) ? '' : (
+                        //         setInputValue2(''),
+                        //         setValue2(null))
+                        // }}
                         onInputChange={(event, newInputValue1) => {
-                            (newInputValue1 == value1) ? '' : (
-                                setInputValue2(''),
-                                setValue2(null))
+                            if (newInputValue1 == value1){
+                                //no actions
+                            } else {
+                                setInputValue2('');
+                                setValue2(null);
+                            }
                         }}
                         onChange={(event, newValue1) => {
                             setValue1(newValue1);

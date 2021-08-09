@@ -11,6 +11,12 @@
     padding: 0 64px;
     margin: 0 auto;
 }
+@media (max-width: 1439px) {
+    .content > header {
+        padding: 0 38px 0 29px;
+        margin: 0;
+    }
+}
 
 /* --------------------- */
 
