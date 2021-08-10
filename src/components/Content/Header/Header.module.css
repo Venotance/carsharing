@@ -2,11 +2,13 @@
 .header_order > div:nth-child(1){
     display: none;
 }
+.header {
+    width: 100%;
+}
 .header,
 .header_order {
     display: grid;
     height: 32px;
-    width: 100%;
     grid-template-areas: "h3 headspace geolocation";
     grid-template-rows: 32px;
     grid-template-columns: 192px 1fr 94px;
@@ -17,6 +19,17 @@
         grid-template-columns: 1fr 192px minmax(536px, 958px) 94px 1fr;
         grid-template-areas:
         '. h3 . geolocation .';
+    }
+}
+@media (max-width: 1023px) {
+    .header_order {
+        grid-template-areas: "h3 headspace geolocation";
+        grid-template-columns: 192px minmax(200px, 305px) 94px;
+    }
+}
+@media (max-width: 767px) {
+    .header_order {
+        width: 100%;
     }
 }
 

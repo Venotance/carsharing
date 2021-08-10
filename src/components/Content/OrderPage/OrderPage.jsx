@@ -18,7 +18,9 @@ const OrderPage = (props) => {
 
   return (
     <div className={ob.content}>
-      <Header statusflag={statusflag}/>
+      <div>
+        <Header statusflag={statusflag} />
+      </div>
       <div></div>
       <NavbarOrder
         geo={checkParams(locationTwo)}
