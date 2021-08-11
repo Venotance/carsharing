@@ -14,6 +14,11 @@
         border-right: none;
     }
 }
+@media (max-width: 767px) {
+    .geolocation {
+        grid-template-rows: 60px 23px 1fr;
+    }
+}
 
 .geolocation input {
     font-family: Roboto;
@@ -30,14 +35,8 @@
 }
 
 .map img {
-    max-width: 736px;
-    max-height: 352px;
-}
-@media (max-width: 1439px) {
-    .map img {
-    max-width: 586px;
-    max-height: 352px;
-    }
+    width: 100%;
+    height: auto;
 }
 
 .select_adress {
@@ -48,8 +47,14 @@
 
 .select_adress > div {
     display: grid;
-    grid-template-columns: 93px 235px 1fr;
+    grid-template-columns: 93px 225px 1fr;
     grid-gap: 15px;
+}
+@media (max-width: 767px) {
+    .select_adress > div {
+        grid-template-columns: 93px 180px 1fr;
+        grid-gap: 5px;
+    }
 }
 
 .select_adress > div > div {
@@ -60,7 +65,3 @@
 .select_adress div > p {
     text-align: right;
 } 
-
-.city_line > div:nth-child(2) > div > div {
-    height: 25px;
-}

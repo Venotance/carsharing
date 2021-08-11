@@ -18,6 +18,11 @@
     display: grid;
     align-content: end;
 }
+@media (max-width: 1023px) {
+    .order_details > p {
+        text-align: start;
+    }
+}
 
 .order_details > p:nth-child(1) {
     min-width: 90.92px;
@@ -30,6 +35,11 @@
     line-height: 21px;
     text-align: right;
     color: #121212;
+}
+@media (max-width: 1023px) {
+    .description > div > p {
+        text-align: left;
+    }
 }
 
 .order_details {
