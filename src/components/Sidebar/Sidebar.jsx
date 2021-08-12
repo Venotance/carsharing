@@ -4,14 +4,16 @@ import './sidebar.css'
 import Grouptext from './Grouptext/Grouptext'
 import Groupnets from './Groupnets/Groupnets'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    console.log(props.statusflag)
     return (
         <div className={ob.sidebar}>
             <input id="sidebar__toggle" type="checkbox" />
             <label className="sidebar__btn" for="sidebar__toggle">
                 <span></span>
             </label>
-            <div className="sidebar__box">
+            
+            <div className={(props.statusflag == 'OrderPage') ? "sidebar__box_order" : "sidebar__box"}>
                 <Grouptext />
                 <Groupnets />
             </div>
@@ -24,7 +26,7 @@ const Sidebar = () => {
                     </label>
                 </span>
             </div>
-            <div className="sidebar__blure"></div>
+            <label className={(props.statusflag == 'OrderPage') ? "sidebar__blure_order" : "sidebar__blure"} for="sidebar__toggle"></label>
         </div>
     )
 }

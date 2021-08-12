@@ -9,16 +9,20 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { locparser1 } from './ParserLocation'
 import { checkParams } from './CheckParams'
 
-const OrderPage = () => {
+const OrderPage = (props) => {
   const [location1, setStateLocation1] = React.useState('')
   let locationOne = locparser1(1, location1);
   let locationTwo = locparser1(2, location1);
+  props.setstatusflag('OrderPage');
+  let statusflag = props.statusflag;
 
   return (
     <div className={ob.content}>
-      <Header />
+      <div>
+        <Header statusflag={statusflag} />
+      </div>
       <div></div>
-      <NavbarOrder 
+      <NavbarOrder
         geo={checkParams(locationTwo)}
         mdl={checkParams('')}
         adt={checkParams('')}
@@ -27,10 +31,10 @@ const OrderPage = () => {
       <div className={ob.body}>
         <div className={ob.body_content}>
           <Route exact path='/carsharing/orderpage/location'>
-            <Location 
-            updateLocation1={setStateLocation1} 
-            location1={locationOne}
-            location2={locationTwo}
+            <Location
+              updateLocation1={setStateLocation1}
+              location1={locationOne}
+              location2={locationTwo}
             />
           </Route>
           <Route exact path='/carsharing/orderpage/model' component={Model} />

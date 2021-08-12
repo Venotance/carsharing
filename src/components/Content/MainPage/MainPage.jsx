@@ -1,15 +1,16 @@
 import React from 'react'
-import Info from './Info/Info' 
-import Slider from './Slider/Slider' 
+import Info from './Info/Info'
+import Slider from './Slider/Slider'
 import ob from './MainPage.module.css'
 
-const MainPage = () => {
-    return (
-        <div className={ob.content}>
-          <Info />
-          <Slider />
-        </div>
-    )
+const MainPage = (props) => {
+  props.setstatusflag('MainPage');
+  return (
+    <div className={ob.content}>
+      <Info />
+      <Slider />
+    </div>
+  )
 }
 
 export default MainPage;

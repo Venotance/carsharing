@@ -5,24 +5,79 @@
     padding-top: 32px;
     grid-template-rows: 32px 32px 34px 1fr;
 }
-
-.content > header {
+.content > div > header {
     max-width: 1376px;
     padding: 0 64px;
     margin: 0 auto;
 }
-
+@media (max-width: 1439px) {
+    .content > div > header {
+        padding: 0 38px 0 29px;
+        margin: 0;
+    }
+}
+@media (max-width: 1023px) {
+    .content > div:nth-child(1) {
+        display: grid;
+        grid-template-columns: 1fr minmax(320px, 1023px) 1fr;
+    }
+    .content > div > header {
+        grid-column: 2/3;
+        padding: 0 32px;
+        margin: 0 auto;
+    }
+    .content > div:nth-child(3) {
+        grid-template-columns: 1fr minmax(200px, 586px) 1fr;
+    }
+    .content > div:nth-child(3) > div:first-child {
+        grid-template-columns: 586px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px) {
+    .content {
+        padding-top: 16px;
+        grid-template-rows: 64px 10px 34px 1fr;
+    }
+    .content > div > header {
+        padding: 0 16px 0 32px;
+    }
+    .content > div:nth-child(3) > div:first-child {
+        grid-template-columns: minmax(288px,767px);
+    }
+}
+@media (max-width: 425px) {
+    .content {
+        padding-top: 16px;
+        grid-template-rows: 64px 10px 68px 1fr;
+    }
+}
 /* --------------------- */
-
-
 
 /* --------------------------- */
 .body {
     display: grid;
-    grid-template-columns: 1fr;
     padding: 0 64px;
     grid-template-columns: 1fr minmax(736px, 1248px) 1fr;
     grid-template-rows: 1fr;
+}
+@media (max-width: 1439px) {
+    .body {
+        padding: 0 32px;
+        /* grid-template-columns: 1fr minmax(536px, 1048px) 1fr; */
+    }
+}
+@media (max-width: 1023px) {
+    .body {
+        grid-template-columns: 1fr minmax(536px, 1023px) 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .body {
+        grid-template-columns: 1fr minmax(288px, 767px) 1fr;
+        padding: 0 16px;
+    }
 }
 
 .body_content {
@@ -32,4 +87,20 @@
     grid-template-columns: minmax(769px, 928px) 320px;
     grid-template-rows: 1fr;
 }
-
+@media (max-width: 1439px) {
+    .body_content {
+        grid-template-columns: minmax(600px, 928px) 300px;
+    }
+}
+@media (max-width: 1023px) {
+    .body_content {
+        grid-template-columns: minmax(288px, 586px);
+        grid-template-rows: 0.8fr 0.4fr;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 767px) {
+    .body_content {
+        grid-template-rows: max-content max-content;
+    }
+}

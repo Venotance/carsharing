@@ -1,17 +1,41 @@
-.header > div:nth-child(1){
+.header,
+.header_order > div:nth-child(1){
     display: none;
 }
 .header {
+    width: 100%;
+}
+.header,
+.header_order {
     display: grid;
     height: 32px;
-    width: 100%;
     grid-template-areas: "h3 headspace geolocation";
     grid-template-rows: 32px;
     grid-template-columns: 192px 1fr 94px;
     align-items: center;
 }
+@media (max-width: 1439px) {
+    .header_order {
+        grid-template-columns: 1fr 192px minmax(536px, 958px) 94px 1fr;
+        grid-template-areas:
+        '. h3 . geolocation .';
+    }
+}
+@media (max-width: 1023px) {
+    .header_order {
+        grid-template-areas: "h3 headspace geolocation";
+        grid-template-columns: 192px minmax(200px, 305px) 94px;
+    }
+}
 @media (max-width: 767px) {
-    .header {
+    .header_order {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .header,
+    .header_order {
         grid-template-areas:
             "h3"
             "geolocation";
@@ -25,7 +49,13 @@
 }
 
 
-.header h3 {
+.header h3,
+.header_order h3 {
+    font-weight: 700;
+    font-size: 30px;
+}
+.header a:nth-child(1),
+.header_order a:nth-child(1) {
     font-family: Roboto;
     font-style: normal;
     font-weight: 700;
@@ -36,6 +66,7 @@
     justify-self: end;
 }
 
+
 .space {
     grid-area: headspace;
 }
@@ -44,7 +75,7 @@
     grid-area: geolocation;
 }
 
-.geolocation svg {
+.geolocation > a svg {
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 3px;

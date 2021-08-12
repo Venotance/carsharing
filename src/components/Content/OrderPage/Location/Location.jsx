@@ -68,6 +68,11 @@ const Location = (props) => {
                 <div className={ob.city_line}>
                     <div><p>Город</p></div>
                     <Autocomplete
+                        // onInputChange={(event, newInputValue1) => {
+                        //     (newInputValue1 == value1) ? '' : (
+                        //         setInputValue2(''),
+                        //         setValue2(null))
+                        // }}
                         onInputChange={(event, newInputValue1) => {
                             if (newInputValue1 == value1) {
                                 //no actions
@@ -94,7 +99,7 @@ const Location = (props) => {
                         id="combo-box-demo"
                         options={inputEQ("Город")}
                         getOptionLabel={(option) => option}
-                        style={{ width: 224, height: 25 }}
+                        style={{}}
                         renderInput={(params) => (
                             <TextField {...params} variant="standard" placeholder="Начните вводить город ..." />
                         )}
@@ -114,7 +119,7 @@ const Location = (props) => {
                         id="combo-box-demo"
                         options={inputEQ("Пункт")}
                         getOptionLabel={(option) => option}
-                        style={{ width: 224, height: 25 }}
+                        style={{}}
                         renderInput={(params) => (
                             <TextField {...params} variant="standard" placeholder="Начните вводить пункт ..." />
                         )}

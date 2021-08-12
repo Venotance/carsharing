@@ -2,11 +2,26 @@
     display: grid;
     margin: 32px 0 0 32px;
 }
+@media (max-width: 1439px) {
+    .description {
+        margin: 32px 0 0 16px;
+    }
+}
+@media (max-width: 1023px) {
+    .description {
+        margin: 16px 0 16px 0;
+    }
+}
 
 .order_details > p,
 .order_details > div {
     display: grid;
     align-content: end;
+}
+@media (max-width: 1023px) {
+    .order_details > p {
+        text-align: start;
+    }
 }
 
 .order_details > p:nth-child(1) {
@@ -20,6 +35,11 @@
     line-height: 21px;
     text-align: right;
     color: #121212;
+}
+@media (max-width: 1023px) {
+    .description > div > p {
+        text-align: left;
+    }
 }
 
 .order_details {
