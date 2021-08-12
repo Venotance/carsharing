@@ -27,8 +27,8 @@
 }
 @media (max-width: 767px) {
   .sidebar__btn {
+    position: absolute;
     top: 17px;
-    left: 8%;
     right: 21px;
     width: 21px;
     height: 35px;
