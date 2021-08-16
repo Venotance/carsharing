@@ -1,7 +1,7 @@
 import React from 'react'
 import ob from './Location.module.css'
 import { useState } from 'react';
-import Map from './img/map.jpg';
+import MapBox from './Map/MapBox';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
@@ -68,11 +68,6 @@ const Location = (props) => {
                 <div className={ob.city_line}>
                     <div><p>Город</p></div>
                     <Autocomplete
-                        // onInputChange={(event, newInputValue1) => {
-                        //     (newInputValue1 == value1) ? '' : (
-                        //         setInputValue2(''),
-                        //         setValue2(null))
-                        // }}
                         onInputChange={(event, newInputValue1) => {
                             if (newInputValue1 == value1) {
                                 //no actions
@@ -124,13 +119,9 @@ const Location = (props) => {
                             <TextField {...params} variant="standard" placeholder="Начните вводить пункт ..." />
                         )}
                     />
-
                 </div>
             </div>
-            <div className={ob.map}>
-                <p>Выбрать на карте:</p>
-                <img src={Map} alt="" />
-            </div>
+            <MapBox city={value1} adress={value2}/>
         </div>
     )
 }

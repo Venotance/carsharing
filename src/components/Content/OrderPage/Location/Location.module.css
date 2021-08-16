@@ -26,19 +26,6 @@
     font-size: 14px;
 }
 
-.map {
-    display: grid;
-    grid-row: 3/3;
-    grid-template-rows: 16px 1fr;
-    grid-gap: 16px;
-
-}
-
-.map img {
-    width: 100%;
-    height: auto;
-}
-
 .select_adress {
     display: grid;
     grid-template-rows: 1fr 1fr;

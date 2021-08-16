@@ -23,8 +23,7 @@
 }
 @media (max-width: 1023px) {
     .header_order {
-        grid-template-areas: "h3 headspace geolocation";
-        grid-template-columns: 192px minmax(200px, 305px) 94px;
+        grid-template-columns: 1fr 192px minmax(236px, 958px) 94px 1fr;
     }
 }
 @media (max-width: 767px) {
