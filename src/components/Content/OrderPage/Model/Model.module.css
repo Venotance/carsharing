@@ -8,3 +8,129 @@
     font-family: Roboto;
     font-weight: 300;
 }
+
+.cat_row{
+    display: grid;
+    grid-template-columns: 279px 1fr;
+}
+.category{
+    display: grid;
+    grid-template-areas: "1t 2t 3t"; 
+    justify-content: space-between;
+}
+
+.category div label{
+    color: #999999;
+    font-size: 14px;
+}
+
+.category div:nth-child(1){
+    grid-area: 1t;
+}
+
+.category div:nth-child(2){
+    grid-area: 2t;
+}
+
+.category div:nth-child(3){
+    grid-area: 3t;
+} 
+
+.in_rad{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.in_rad + label{
+    align-items: center;
+    user-select: none;
+    position: relative;
+    margin-left: 20px;
+}
+
+.in_rad + label::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    position: absolute;
+    left:-20px;
+}
+
+.in_rad:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #0EC261;
+}
+
+
+.in_rad:checked+label::before {
+    border-color: #0EC261;
+    border-width: 3px;
+}
+
+.choice_mobile{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    padding-right:192px;
+    height: 74vh;
+    overflow-y: scroll;
+}
+
+.choice_mobile::-webkit-scrollbar { width: 0 !important }
+
+.choice_mobile { overflow: -moz-scrollbars-none; }
+
+.choice_mobile { -ms-overflow-style: none; }
+
+
+.card input{
+    display: none;
+}
+
+.automobile{
+    border: 1px solid #EEEEEE;
+    width: 368px;
+    height: 224px;
+}
+
+.card input:hover + .automobile{
+    border: 1px solid #999999;
+}
+
+.card input:checked + .automobile {
+    border: 1px solid #0EC261
+}
+
+.automobile h3{
+    margin: 16px 0 0 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #121212;
+}
+
+.automobile p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+    margin-left: 16px;
+}
+
+.automobile img{
+    width: 256px;
+    margin-left: 95px;
+    margin-top: 36px;
+}
+
+
