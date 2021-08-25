@@ -1,112 +1,61 @@
 import React from 'react'
-import ImgMap from './img/map.jpg'
 import ob from './MapBox.module.css'
-import './MapBox.css'
-// import { YMaps, Map } from 'react-yandex-maps';
 import { YMaps, Map, Clusterer, Placemark } from "react-yandex-maps";
 import { points, gradientColors } from "./data";
 
-const mapState = {
-    center: [55.751574, 80.573856],
-    zoom: 3,
-    behaviors: ["default", "scrollZoom"]
-};
-
-const getPointData = index => {
-    return {
-        balloonContentBody: "placemark <strong>balloon " + index + "</strong>",
-        clusterCaption: "placemark <strong>" + index + "</strong>"
-    };
-};
-
-const getPointOptions = () => {
-    return {
-        preset: "islands#violetIcon",
-        iconColor: getRandomColor()
-    };
-};
-
-function getRandomColor() {
-    return gradientColors[Math.floor(Math.random() * gradientColors.length)];
-}
-
-
-
-
-class MapBox extends React.Component {
-    constructor(props) {
-        super(props);
-        this.changeSomething = this.changeSomething.bind(this);
-        this.state = {
-            some: 0
-        };
+const MapBox = (props) => {
+    function checkvalue(params) {
+        let city = params.city;
+        if ((city === null) || (city === '') || (city === undefined)) {
+            return 0;
+        }
+        else return 1;
     }
+    const [zoom, setZoom] = React.useState(9)
+    const mapState = { center: [55.75, 37.57], zoom }
+    
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //!Проблемное место
+    let coord = (checkvalue(props) ? setZoom(9) : setZoom(1))
+    
 
-    changeSomething = () => {
-        this.setState({ some: 1 });
-    };
-
-    render() {
-        return (
-            <div className={ob.mapbox}>
-                <div className={ob.map_wrapper1}>
-                    <YMaps>
-                        <Map
-                            className="map_wrapper"
-                            state={mapState}
-                            modules={["package.full"]}
-                        >
-                            <Clusterer
-                                options={{
-                                    clusterIconLayout: "default#pieChart",
-                                    clusterIconPieChartRadius: 25,
-                                    clusterIconPieChartCoreRadius: 10,
-                                    clusterIconPieChartStrokeWidth: 1,
-                                    clusterDisableClickZoom: true,
-                                    clusterHideIconOnBalloonOpen: false,
-                                    geoObjectHideIconOnBalloonOpen: false
-                                }}
-                            >
-                                {points.map((points, idx) => (
-                                    <Placemark
-                                        key={idx}
-                                        geometry={points}
-                                        properties={getPointData(idx)}
-                                        options={getPointOptions()}
-                                    />
-                                ))}
-                            </Clusterer>
-                        </Map>
-                    </YMaps>
-                </div>
-                {/* <button
-                    onClick={this.changeSomething}
-                    style={{ marginTop: 40, width: 200, height: 60 }}
+    return (
+        <div className={ob.mapbox}>
+            {console.log('props:', props, 'checkvalue:', checkvalue(props), 'zoom:', zoom)}
+            <div className={ob.map_wrapper1}>
+                <YMaps
+                    onApiAvaliable={ymaps => this.geocode(ymaps)}
+                    query={{
+                        ns: 'use-load-option',
+                        apikey: '34deb942-75b6-4b98-a613-b242b96be84d',
+                        load: 'Map,Placemark,control.ZoomControl,geoObject.addon.balloon',
+                    }}
                 >
-                    Click to rerender
-                </button> */}
+                    <Map
+                        modules={['geocode']}
+                        state={mapState}
+                        className={ob.map_wrapper}
+                    >
+                        <Clusterer
+                            options={{
+                                preset: 'islands#invertedVioletClusterIcons',
+                                groupByCoordinates: false,
+                            }}
+                        >
+                            {points.map((coordinates, index) => (
+                                <Placemark key={index} geometry={coordinates} />
+                            ))}
+                        </Clusterer>
+                        <p>
+
+                            
+                        </p>
+                    </Map>
+                </YMaps>
+
             </div>
-        );
-    }
+        </div>
+    )
 }
 
 export default MapBox;
-
-// const MapBox = (props) => {
-//     // console.log(props)
-//     return (
-//         <div className={ob.mapbox}>
-//             <p>Выбрать на карте:</p>
-//             <div className={ob.map_wrapper}>
-//                 <YMaps>
-//                     <div>
-//                         My awesome application with maps!
-//                         <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
-//                     </div>
-//                 </YMaps>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default MapBox;
